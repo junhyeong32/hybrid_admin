@@ -1,6 +1,7 @@
 export const typography = {
   fontFamily: "Noto Sans KR",
   fontWeight: 400,
+  fontSize: 16,
   // 'body1':{
   //   fontSize:10
   // },
@@ -14,31 +15,31 @@ export const typography = {
   //   fontSize:10
   // },
   h1: {
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: 700,
   },
   h2: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 700,
   },
   h3: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 700,
   },
   h4: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 700,
   },
   h5: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: 700,
   },
   h6: {
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: 700,
   },
   h7: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: 700,
   },
   fs20: {
@@ -49,9 +50,10 @@ export const typography = {
     fontSize: 16,
     lineHeight: "23px",
   },
-  fs50: {
-    fontSize: 50,
-    lineHeight: "55px",
+  big: {
+    fontSize: 36,
+    lineHeight: "44px",
+    fontWeight: 700,
   },
 
   normal: {

@@ -89,54 +89,53 @@ export function OutLineInput({
   );
 }
 
-export function DateInput({ title, placeholder, value, setValue, ...props }) {
+export function BackgroundInput({
+  title,
+  placeholder,
+  value,
+  setValue,
+  sx,
+  w,
+  h,
+  type,
+  background,
+}) {
   return (
-    <Column
-      justifyContent="start"
-      alignItems="start"
+    <TextField
       sx={{
-        width: "25%",
-        ".css-17vdz66": {
-          width: "100% !important",
+        "& input::placeholder": {
+          fontSize: "16px",
+          color: "#909090 !important",
+          fontWeight: "bold",
+          paddingLeft: 0,
+          pl: "16px",
         },
-        // borderBottom: "1px solid #0D1D41",
       }}
-    >
-      <Typography variant="h6">{title}</Typography>
-      {/* <LocalizationProvider className="date" dateAdapter={AdapterDateFns}>
-        <DateRangePicker
-          calendars={2}
-          value={value}
-          className="date"
-          endText={<Image src="/logo.png" width={15} height={15} alt="" />}
-          mask=""
-          sx={{
-            width: "100%",
-            ".css-17vdz66": {
-              width: "100% !important",
-            },
-          }}
-          inputFormat="yyyy-MM-dd"
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(startProps, endProps) => (
-            <React.Fragment>
-              <RenderInput
-                endText={
-                  <Image src="/logo.png" width={15} height={15} alt="" />
-                }
-                variant="standard"
-                {...startProps}
-              />
-              <RenderInput variant="standard" {...endProps} />
-            </React.Fragment>
-          )}
-        />
-      </LocalizationProvider> */}
-
-      {/* <DatePicker onChange={(e) => setValue(e)} value={value} /> */}
-    </Column>
+      disableunderline="true"
+      InputProps={{
+        // disableUnderLine: true,
+        disableunderline: "true",
+        pl: "16px",
+        style: {
+          height: h || 30,
+          borderRadius: 5,
+          paddingLeft: 0,
+          background: background,
+          border: "none",
+          pl: "16px",
+        },
+      }}
+      variant="standard"
+      type={type}
+      fullWidth
+      placeholder={placeholder}
+      value={value}
+      onChange={(e) => {
+        setValue(e.target.value);
+        e.preventDefault();
+      }}
+      props="true"
+    />
   );
 }
 

@@ -3,7 +3,7 @@ export const fiiled_input = {
     root: {
       padding: 0,
       borderRadius: 0,
-      borderBottom: 0,
+      borderBottom: "none",
       "::before": {
         borderBottom: "none",
       },

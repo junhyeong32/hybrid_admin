@@ -7,27 +7,37 @@ import { fiiled_input } from "../theme/components/input";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#0D1D41",
+      main: "#5B43EF",
       white: "#ffffff",
       black: "#000000",
-      lightBlack: "#595959",
-      gray: "#909090",
-      blue: "#665BEB",
+      gray: "#666F7B",
+    },
+    kakao: {
+      main: "#FEE500",
     },
     secondary: {
       main: "#ffffff",
     },
     third: {
-      main: "#F8C4C6",
+      main: "#F7F5FF",
     },
-    progress_second: {
-      main: "#E2E2E2",
+    button_gray: {
+      main: "#C5C8CD",
     },
     gray: {
-      main: "#C4D2D9",
+      main: "#FDFDFD",
+      scale2: "#F7F8F9",
+      scale3: "#F1F3F4",
+      scale4: "#E9EBEE",
+      scale5: "#C5C8CD",
+      scale6: "#89929E",
+      scale7: "#666F7B",
+      scale8: "#3A4552",
+      scale9: "#2A323B",
+      scale10: "#171D23",
     },
     dark_gray: {
-      main: "#909090",
+      main: "#89929E",
     },
     white: {
       main: "#ffffff",

@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
 }
 
 a {
@@ -15,9 +14,28 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  position: fixed;
+  overflow: hidden;
+}
+
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background: #ffffff;
+  border-top: 1px solid #f1f3f4;
+  padding: 8px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  height: 60px;
+}
+
+.text_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

@@ -99,6 +99,9 @@ export function BackgroundInput({
   h,
   type,
   background,
+  rows,
+  multiline,
+  ...props
 }) {
   return (
     <TextField
@@ -115,9 +118,9 @@ export function BackgroundInput({
       InputProps={{
         // disableUnderLine: true,
         disableunderline: "true",
-        pl: "16px",
+
         style: {
-          height: h || 30,
+          height: h,
           borderRadius: 5,
           paddingLeft: 0,
           background: background,
@@ -134,7 +137,8 @@ export function BackgroundInput({
         setValue(e.target.value);
         e.preventDefault();
       }}
-      props="true"
+      rows={rows}
+      multiline={multiline}
     />
   );
 }

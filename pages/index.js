@@ -41,7 +41,7 @@ export default function Home() {
             </Typography>
           </Typography>
 
-          <Typography>
+          <Typography variant="basic" color="gray.scale7">
             여기저기 흩어진 나의 쇼핑 내역을
             <br />한 곳에 모아주는 쇼핑친구입니다
           </Typography>
@@ -68,26 +68,32 @@ export default function Home() {
                 sx={{ width: "100%", height: 56, gap: 1, color: "blakc" }}
               >
                 <Image src="/login/kakao.png" width={18} height={17} alt="" />
-                카카오로 시작하기
+                <Typography variant="basic" color="primary.black">
+                  카카오로 시작하기
+                </Typography>
               </Button>
               <Button
                 variant="outlined"
                 fullWidth
-                sx={{ width: "100%", height: 56, mt: 1 }}
+                sx={{
+                  width: "100%",
+                  height: 56,
+                  mt: 1,
+                  border: " 1px solid #3A4552",
+                }}
                 onClick={() => router.push("signup")}
               >
-                휴대전화로 시작하기
+                <Typography variant="basic" color="primary.black">
+                  휴대전화로 시작하기
+                </Typography>
               </Button>
             </>
           )}
 
-          <Typography variant="normal" color={"gray"} mt={"20px"}>
+          <Typography variant="normal" color={"gray.scale6"} mt={"20px"}>
             휴대폰번호가 바뀌셨나요?
-            <Link href="account">
-              <a
-                style={{ textDecoration: "underline", marginLeft: "8px" }}
-                href=""
-              >
+            <Link href="find" passHref>
+              <a style={{ textDecoration: "underline", marginLeft: "8px" }}>
                 계정찾기
               </a>
             </Link>

@@ -56,6 +56,12 @@ export const typography = {
     fontWeight: 700,
   },
 
+  basic: {
+    fontSize: 16,
+    lineHeight: "20px",
+    fontWeight: 400,
+  },
+
   normal: {
     fontSize: 14,
     lineHeight: "20px",

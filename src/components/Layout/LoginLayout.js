@@ -13,6 +13,7 @@ import {
   Select,
   MenuItem,
   Container,
+  CircularProgress,
 } from "@mui/material";
 import Column from "../Box/Column";
 import Row from "../Box/Row";
@@ -34,37 +35,35 @@ export default function LoginLayout({
   return (
     <>
       {header && <Header title={title} />}
-      <main>
-        {loading ? (
-          <Container
-            component="article"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircularProgress size="70px" thickness={5} color="primary" />
-          </Container>
-        ) : (
-          <Container
-            component="article"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-between",
-              alignItems: "center",
-              minHeight: "calc(100vh - 208px)",
-              height: "100%",
-              p: "85px 20px 59px 20px",
-              ...sx,
-            }}
-          >
-            {children}
-          </Container>
-        )}
-      </main>
+      {loading ? (
+        <Container
+          component="main"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress size="70px" thickness={5} color="primary" />
+        </Container>
+      ) : (
+        <Container
+          component="main"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-between",
+            alignItems: "center",
+            minHeight: "calc(100vh - 208px)",
+            height: "100%",
+            p: "85px 20px 59px 20px",
+            ...sx,
+          }}
+        >
+          {children}
+        </Container>
+      )}
       {/* {footer && <Footer />} */}
     </>
   );

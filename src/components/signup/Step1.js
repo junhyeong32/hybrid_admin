@@ -12,15 +12,17 @@ import { useCookies } from "react-cookie";
 
 export default function Step1({ phone, setPhone }) {
   return (
-    <>
-      <Typography>휴대폰 번호 입력</Typography>
-      <Typography>휴대폰번호 입력으로 간편하게 시작해보세요</Typography>
+    <Column>
+      <Typography variant="h2">휴대폰 번호 입력</Typography>
+      <Typography variant="basic" color="gray.scale7" mt={"16px"} mb={"60px"}>
+        휴대폰번호 입력으로 간편하게 시작해보세요
+      </Typography>
       <BackgroundInput
         background="#F1F3F4"
         value={phone}
         setValue={setPhone}
-        h={58}
+        h={56}
       />
-    </>
+    </Column>
   );
 }

@@ -11,8 +11,7 @@ import cpiatApi from "../../utility/cplatApi";
 import { useCookies } from "react-cookie";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
-import Step3 from "./Step3";
-import Terms from "./terms";
+import Terms from "./Terms";
 import { useRouter } from "next/router";
 
 export default function SignupForm() {
@@ -53,12 +52,14 @@ export default function SignupForm() {
   };
 
   const handleAgreeTerms = () => {
-    if (terms[0] && terms[1]) router.replace("link-shop");
+    if (terms[1] && terms[2]) router.replace("link-shop");
   };
 
   return (
-    <Layout>
-      <Column sx={{ width: "100%" }}>
+    <Layout
+      back_action={() => setStep(step === 1 ? router.push("/") : step - 1)}
+    >
+      <Column justifyContent={"between"} sx={{ width: "100%", height: "100%" }}>
         {step === 1 ? (
           <Step1 phone={phone} setPhone={setPhone} />
         ) : step === 2 ? (
@@ -73,11 +74,14 @@ export default function SignupForm() {
 
         <Button
           variant="contained"
-          color={phone.length === 11 ? "primary" : "gray"}
+          color={
+            phone.length === 11 || (terms[1] && terms[2])
+              ? "primary"
+              : "button_gray"
+          }
           sx={{
             width: "100%",
             height: 56,
-            mt: 1,
             color: "white",
           }}
           onClick={() => {

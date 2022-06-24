@@ -19,31 +19,49 @@ import Row from "../Box/Row";
 import { LoadingButton } from "@mui/lab";
 import { useCookies } from "react-cookie";
 import { navigationList } from "./navigationList";
+import { useRouter } from "next/router";
 
 export default function Navigation({ title }) {
+  const router = useRouter();
   const [cookies, setCookie, removeCookie] = useCookies();
   const [loading, setLoading] = useState(false);
 
-  //TODO
-  //router에 따른 이미지 변화 작업
+  console.log(router.pathname.split("/")[1]);
 
   return (
     <nav>
       {navigationList.map((list, key) => {
         return (
-          <Column alignItems={"center"} key={key}>
+          <Column
+            justifyContent={"between"}
+            alignItems={"center"}
+            key={key}
+            sx={{ height: 44 }}
+          >
             {list.img && (
               <Image
-                src={list.img}
+                src={
+                  `/${router.pathname.split("/")[1]}` === list.href
+                    ? list.route_img
+                    : list.img
+                }
                 width={list.img_width}
                 height={list.img_height}
               />
             )}
-            <Link href={list.href}>{list.text}</Link>
+            <Typography
+              variant="small"
+              color={
+                `/${router.pathname.split("/")[1]}` === list.href
+                  ? "primary"
+                  : "gray"
+              }
+            >
+              <Link href={list.href}>{list.text}</Link>
+            </Typography>
           </Column>
         );
       })}
-      <Column></Column>
     </nav>
   );
 }

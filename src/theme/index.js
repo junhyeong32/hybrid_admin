@@ -36,6 +36,7 @@ const theme = createTheme({
       scale9: "#2A323B",
       scale10: "#171D23",
     },
+
     dark_gray: {
       main: "#89929E",
     },
@@ -43,9 +44,6 @@ const theme = createTheme({
       main: "#ffffff",
     },
     red: { main: "#C14327" },
-    excel: {
-      main: "#20744A",
-    },
     black: {
       main: "#000000",
     },

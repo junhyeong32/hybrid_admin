@@ -3,6 +3,8 @@ export const button = {
     root: {
       minWidth: 0,
       color: "white",
+      fontWeight: 700,
+      boxShadow: "none",
     },
   },
 };
